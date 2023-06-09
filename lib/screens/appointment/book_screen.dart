@@ -126,10 +126,11 @@ class BookScreen extends StatelessWidget {
                       if (formKey.currentState!.validate() &&
                           state is! AddAppointmentLoadingState) {
                         AppointmentModel appointment = AppointmentModel(
-                            bookName: nameController.text.trim(),
-                            bookSection: bookSection,
-                            bookDoctor: doctorName,
-                            bookDate: dateController.value.text);
+                          bookName: nameController.text.trim(),
+                          bookSection: bookSection,
+                          bookDoctor: doctorName,
+                          bookDate: dateController.value.text,
+                        );
                         cubit.addAppointment(appointment);
                       }
                     },
